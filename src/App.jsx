@@ -9,6 +9,7 @@ const initialState = {
   quizQuestion: [],
   status: "loading",
   index: 0,
+  answer: null,
 };
 function reducer(state, action) {
   switch (action.type) {
@@ -24,17 +25,24 @@ function reducer(state, action) {
         status: "error",
       };
     case "start":
-      return{
+      return {
         ...state,
-        status: "active"
-      }
+        status: "active",
+      };
+    case "newAnswer":
+      return {
+        ...state,
+        answer: action.payload,
+      };
+    default:
+      return state;
   }
 }
 export default function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const { quizQuestion, status, index } = state;
-  
-  const numOfQuestion=quizQuestion.length;
+  const { quizQuestion, status, index, answer } = state;
+
+  const numOfQuestion = quizQuestion.length;
   useEffect(function () {
     fetch("http://localhost:8000/quizQuestion")
       .then((res) => res.json())
@@ -48,8 +56,16 @@ export default function App() {
     <>
       {status === "loading" && <Loading />}
       {status === "error" && <Error />}
-      {status === "ready" && <Header numOfQuestion={numOfQuestion} dispatch={dispatch}/>}
-      {status === "active" && <Question quizQuestion={quizQuestion[index]}/>}
+      {status === "ready" && (
+        <Header numOfQuestion={numOfQuestion} dispatch={dispatch} />
+      )}
+      {status === "active" && (
+        <Question
+          quizQuestion={quizQuestion[index]}
+          dispatch={dispatch}
+          answer={answer}
+        />
+      )}
     </>
   );
 }
