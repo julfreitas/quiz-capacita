@@ -1,10 +1,10 @@
 import Options from "./Options";
 
-export default function Question() {
+export default function Question({quizQuestion}) {
   return (
     <div className="question-container">
-      <h2 className="question">Exemplo questão 1</h2>
-      <Options />
+      <h2 className="question">{quizQuestion.question}</h2>
+      <Options quizQuestion={quizQuestion} />
     </div>
   );
 }

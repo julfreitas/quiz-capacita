@@ -1,10 +1,10 @@
-export default function Options() {
+export default function Options({quizQuestion}) {
   return (
     <div className="options">
-      <button className="option">Opção1</button>
-      <button className="option">Opção2</button>
-      <button className="option">Opção3</button>
-      <button className="option">Opção4</button>
+      {quizQuestion.options.map((option)=>(
+      <button className="option" key={option}>{option}</button>
+
+      ))}     
     </div>
   );
 }
