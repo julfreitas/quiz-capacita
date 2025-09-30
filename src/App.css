@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-/* Configuração global e tema */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #1a111e; /* Roxo bem escuro */
+  background-color: #1a111e; 
   color: #f8fafc;
   display: flex;
   justify-content: center;
@@ -15,7 +14,7 @@ body {
   padding: 1rem;
 }
 
-/* --- TELA DE CARREGAMENTO --- */
+/* LOADING */
 .loader-container {
   display: flex;
   flex-direction: column;
@@ -25,8 +24,8 @@ body {
 }
 
 .loader {
-  border: 8px solid #4a3a55; /* Cinza escuro roxo para o fundo do anel */
-  border-top: 8px solid #a855f7; /* Roxo vibrante para a parte que gira */
+  border: 8px solid #4a3a55; 
+  border-top: 8px solid #a855f7;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -43,8 +42,31 @@ body {
   100% { transform: rotate(360deg); }
 }
 
+/* ERROR */
+.error {
+  background-color: #4a2a33; 
+  color: #f8a5a5; 
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  border: 1px solid #6b3a4a;
+  max-width: 500px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
 
-/* CARD DE BOAS-VINDAS & TELA DE CONCLUSÃO */
+.error svg {
+    width: 32px; 
+    height: 32px;
+    stroke-width: 2.5px;
+    flex-shrink: 0; 
+}
+
+
+/* HEADER e ENDQUIZ*/
 .bemvindo, .completion {
   background-color: #2a1a33;
   padding: 2.5rem 3.5rem;
@@ -115,7 +137,7 @@ body {
   box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.3);
 }
 
-/* --- ESTILO PARA A TELA DO QUIZ --- */
+/* QUIZMAIN */
 
 .quiz {
   background-color: #2a1a33;
@@ -148,7 +170,7 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, #a855f7, #
   margin-bottom: 2rem;
 }
 
-/* --- PERGUNTAS E OPÇÕES --- */
+/* QUESTION e OPTIONS */
 
 .question-container { margin-bottom: 1.5rem; }
 .question {
@@ -182,7 +204,24 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, #a855f7, #
   transform: translateY(-2px);
 }
 
-/* --- NOVOS ESTILOS PARA BOTÕES DE NAVEGAÇÃO --- */
+.option.correct {
+  background-color: #166534; 
+  border-color: #22c55e;
+  color: #f0fdf4;
+}
+
+.option.wrong {
+  background-color: #991b1b; 
+  border-color: #ef4444;
+  color: #fef2f2;
+}
+
+.option:disabled {
+  cursor: not-allowed;
+}
+
+
+/* NEXTBUTTON */
 .navigation-buttons {
   display: flex;
   justify-content: flex-end;
@@ -223,8 +262,6 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, #a855f7, #
   box-shadow: 0 10px 15px -3px rgba(109, 40, 217, 0.4);
 }
 
-
-/* Ajustes para telas menores */
 @media (max-width: 600px) {
   .bemvindo, .completion, .quiz { padding: 2rem 1.5rem; }
   .bemvindo h1, .completion h2 { font-size: 1.75rem; }
