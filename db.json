@@ -1,0 +1,114 @@
+{
+  "quizQuestion": [
+    {
+      "question": "O que é o React?",
+      "options": [
+        "Um framework completo de back-end",
+        "Uma linguagem de programação",
+        "Uma biblioteca para criar interfaces de usuário",
+        "Um gerenciador de banco de dados"
+      ],
+      "correctAnswer": 2,
+      "points": 5
+    },
+    {
+      "question": "Qual a principal diferença entre componente funcional e de classe?",
+      "options": [
+        "Componentes funcionais não podem ter estado",
+        "Componentes de classe usam `this` e métodos de ciclo de vida",
+        "Componentes funcionais não podem renderizar JSX",
+        "Componentes de classe não podem receber props"
+      ],
+      "correctAnswer": 1,
+      "points": 5
+    },
+    {
+      "question": "Para que serve o JSX?",
+      "options": [
+        "Para escrever HTML dentro do JavaScript",
+        "Para criar arquivos CSS",
+        "Para armazenar dados no banco",
+        "Para manipular eventos do servidor"
+      ],
+      "correctAnswer": 0,
+      "points": 5
+    },
+    {
+      "question": "Qual a diferença entre props e state?",
+      "options": [
+        "Props são mutáveis, state é imutável",
+        "State é usado para dados globais, props para dados locais",
+        "Props são imutáveis e vêm de fora; state é mutável e pertence ao componente",
+        "Props e state são a mesma coisa"
+      ],
+      "correctAnswer": 2,
+      "points": 5
+    },
+    {
+      "question": "O que são hooks?",
+      "options": [
+        "Funções especiais que permitem usar estado e efeitos em componentes funcionais",
+        "Métodos de ciclo de vida de componentes de classe",
+        "Bibliotecas externas do React",
+        "Variáveis globais do React"
+      ],
+      "correctAnswer": 0,
+      "points": 5
+    },
+    {
+      "question": "Qual é a fase inicial do ciclo de vida de um componente?",
+      "options": [
+        "Atualização",
+        "Montagem",
+        "Desmontagem",
+        "Renderização condicional"
+      ],
+      "correctAnswer": 1,
+      "points": 12.5
+    },
+    {
+      "question": "O que é lifting state up?",
+      "options": [
+        "Movimentar o estado para o componente pai para compartilhar entre irmãos",
+        "Converter props em state",
+        "Remover estado do componente",
+        "Usar Redux em vez de state local"
+      ],
+      "correctAnswer": 0,
+      "points": 12.5
+    },
+    {
+      "question": "Qual a principal vantagem do Context API sobre props drilling?",
+      "options": [
+        "Substituir todos os estados do componente",
+        "Evitar passar props manualmente por múltiplos níveis",
+        "Melhorar performance do React em 100%",
+        "Evitar uso de hooks"
+      ],
+      "correctAnswer": 1,
+      "points": 12.5
+    },
+    {
+      "question": "Para que serve React.memo?",
+      "options": [
+        "Evitar renderizações desnecessárias de componentes funcionais",
+        "Substituir state por props",
+        "Criar variáveis globais",
+        "Carregar dados do servidor automaticamente"
+      ],
+      "correctAnswer": 0,
+      "points": 18.75
+    },
+    {
+      "question": "Qual é o papel do Virtual DOM?",
+      "options": [
+        "Criar um backup do DOM real",
+        "Atualizar o DOM real apenas onde houver diferença",
+        "Renderizar todos os elementos toda vez que o estado muda",
+        "Armazenar dados do servidor"
+      ],
+      "correctAnswer": 1,
+      "points": 18.75
+    }
+  ]
+}
